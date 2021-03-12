@@ -1,16 +1,22 @@
-package com.example.lab2;
+package com.example.lab3;
 
 public class Question {
     private int title;
     private int text;
     private int answers_count;
     private int image;
+    private int id;
 
-    public Question(int title, int text, int answers_count, int image) {
+    public Question(int id, int title, int text, int answers_count, int image) {
+        this.id = id;
         this.title = title;
         this.text = text;
         this.answers_count = answers_count;
         this.image = image;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public int getTitle() {
@@ -43,5 +49,9 @@ public class Question {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
